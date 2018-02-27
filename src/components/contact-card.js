@@ -1,5 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Card, Button, Icon } from "semantic-ui-react";
 
 export default function ContactCard({ contact, deleteContact }) {
@@ -34,8 +35,9 @@ export default function ContactCard({ contact, deleteContact }) {
     </Card>
   );
 }
+// eslint-disable-next-line
 ContactCard.propTypes={
-    contact:React.PropTypes.object.isRequired
+    contact:PropTypes.object.isRequired
 };
 // ContactCard.propTypes = {
 //   contact: React.PropTypes.object.isRequired

@@ -9,8 +9,5 @@ export default function ContactList({ contacts }) {
     });
   };
 
-  return 
-  <Card.Group>
-  {cards()}
-  </Card.Group>;
+  return <Card.Group>{cards()}</Card.Group>;
 }
