@@ -1,11 +1,11 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import { Card, Button, Icon } from "semantic-ui-react";
 
 export default function ContactCard({ contact, deleteContact }) {
-  return (
-    <Card>
+  return <Card>
       <Card.Content>
         <Card.Header>
           <Icon name="user outline" />
@@ -24,16 +24,15 @@ export default function ContactCard({ contact, deleteContact }) {
       </Card.Content>
       <Card.Content extra>
         <div className="ui two buttons">
-          <Button basic color="green">
+          <Link to={`/contacts/edit/${contact._id}`} className="ui basic button green">
             Edit
-          </Button>
-          <Button basic color="red">
+          </Link>
+          <Button basic color="red" onClick={() => deleteContact(contact._id)}>
             Delete
           </Button>
         </div>
       </Card.Content>
-    </Card>
-  );
+    </Card>;
 }
 // eslint-disable-next-line
 ContactCard.propTypes={
